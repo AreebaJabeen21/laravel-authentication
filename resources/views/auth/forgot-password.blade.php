@@ -7,7 +7,7 @@
 <h4 class="text-center">{{ __("Forgot Password") }}</h4>
 <p class="text-center py-1">{{ __("You can reset your password here") }}.</p>
 
-<form class="forgot-password-form" action="#" method="POST">
+<form class="forgot-password-form" action="{{ route('password.email') }}" method="POST">
     @csrf
     <div class="col-12 form-group">
         <input type="email" name="email" class="form-control" placeholder="{{ __('Email') }}" required autofocus>
